@@ -3,7 +3,8 @@ from pathlib import Path
 
 import logging
 
-logging.basicConfig(level=logging.INFO)
+# logging string
+logging.basicConfig(level=logging.INFO,format='[%(asctime)s]: %(message)s:')
 
 project_name='Major_project'
 
@@ -20,13 +21,21 @@ list_of_files=[
     f"src/{project_name}/piplines/prediction_pipelines.py",
     f"src/{project_name}/exception.py",
     f"src/{project_name}/logger.py",
-    f"src/{project_name}/utils.py",
+    f"src/{project_name}/utils/__init__.py",
+    f"src/{project_name}/config/__init__.py",
+    f"src/{project_name}/config/configuration.py",
+    f"src/{project_name}/entity/__init__.py",
+    f"src/{project_name}/constants/__init__.py",
+    "config/config.yaml",
+    "dvc.yaml",
+    "params.yaml",
     "main.py",
     "app.py",
     "Dockerfile",
     "requirements.txt",
     "setup.py"
-    "main.py"
+    "research/trials.ipynb",
+    "templates/index.html"
 ]
 
 for filepath in list_of_files: 
@@ -35,7 +44,7 @@ for filepath in list_of_files:
 
     if filedir != "":
         os.makedirs(filedir,exist_ok=True)
-        logging.info(f"Creating directory:{filedir} for the file {filename}")
+        logging.info(f"Creating directory:{filedir} for the file: {filename}")
 
     if (not os.path.exists(filepath)) or (os.path.getsize(filepath)==0):
         with open(filepath,'w') as f:

@@ -1,4 +1,9 @@
 from setuptools import find_packages,setup
+import setuptools
+
+with open("README.md","r", encoding="utf-8") as f:
+    long_description = f.read()
+
 
 HYPEN_E_DOT='-e .'
 
@@ -16,13 +21,26 @@ def get_requirements(file_path:str)->list[str]:
 
         return requirements
 
-
+__version__ = "0.0.1"
+REPO_NAME = "MajorProject"
+AUTHOR_USER_NAME = "Manju Patel"
+SRC_REPO = "DLProject"
+AUTHOR_EMAIL = "manjuppatel8572@gmail.com"
 setup(
-    name='mlproject',
-    version='0.0.1'
-    ,author='Manju',
-    author_email='manjuppatel8572@gmail.com',
-    packages=find_packages(),
-    install_requires=get_requirements('requirements.txt')
+    name=SRC_REPO ,
+    version=__version__,
+    author=AUTHOR_USER_NAME,
+    author_email=AUTHOR_EMAIL,
+    package_dir={"": "src"},
+    packages=find_packages(where= "src"),
+    install_requires=get_requirements('requirements.txt'),
+    description="A small python package for CNN app",
+    long_description=long_description,
+    long_description_content= "text/markdown",
+    url= f"https://github.com/{ AUTHOR_USER_NAME} /{ REPO_NAME }",
+    project_urls={
+        "Bug Tracker": f"https://github.com/{ AUTHOR_USER_NAME }/{ REPO_NAME} /issues",
+        },
+    
 
 )

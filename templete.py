@@ -1,15 +1,15 @@
 import os
 from pathlib import Path
-
 import logging
 
-# logging string
+# Logging String
 logging.basicConfig(level=logging.INFO,format='[%(asctime)s]: %(message)s:')
 
-project_name='Major_project'
+
+project_name='DRPredictionModel'
 
 list_of_files=[
-    # ".github/workflow/.gitkeep",
+    ".github/workflow/.gitkeep",
     f"src/{project_name}/__init__.py",
     f"src/{project_name}/componants/__init__.py",
     f"src/{project_name}/componants/data_ingestion.py",
@@ -38,8 +38,10 @@ list_of_files=[
     "templates/index.html"
 ]
 
+# Creating files and folders
 for filepath in list_of_files: 
     filepath = Path(filepath)
+    # separating the floders and file name
     filedir, filename = os.path.split(filepath)
 
     if filedir != "":

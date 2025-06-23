@@ -24,7 +24,7 @@ def get_requirements(file_path:str)->list[str]:
 __version__ = "0.0.1"
 REPO_NAME = "MajorProject"
 AUTHOR_USER_NAME = "Manju Patel"
-SRC_REPO = "DLProject"
+SRC_REPO = "DRPredictionModel"
 AUTHOR_EMAIL = "manjuppatel8572@gmail.com"
 setup(
     name=SRC_REPO ,

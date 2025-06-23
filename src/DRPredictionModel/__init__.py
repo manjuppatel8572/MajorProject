@@ -19,4 +19,4 @@ logging.basicConfig(
     ]
 )
 
-logger =logging.getLogger("Major_projectLogger")
+logger =logging.getLogger("DRPredictionModelLogger")

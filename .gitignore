@@ -136,6 +136,7 @@ ENV/
 env.bak/
 venv.bak/
 diabeticRetinopathy/
+myDR/
 
 # Spyder project settings
 .spyderproject

@@ -19,19 +19,18 @@
 ...
 ### STEPS:
 
-Clone the repository
 
 ```bash
-
+Clone the repository
 ```
 ...
 ### STEPS 01- Create a conda environment after opening the repository
 
 ```bash
-conda create -n diabeticRetinopathy python==3.8 -y
+conda create -n myDR python==3.10 -y
 ```
 ```bash
-conda activate diabeticRetinopathy
+conda activate myDR
 ```
 
 ...
